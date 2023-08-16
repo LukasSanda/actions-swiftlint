@@ -42,8 +42,8 @@ jobs:
       fail-fast: false
       matrix:
         virtual-environment: ["ubuntu-18.04", "ubuntu-20.04", "macos-11", "macos-12"]
-        swift-version: ["5.5.3", "5.6.1"]
-        swiftlint-version: ["0.47.1", "master", "809dcc6bdcf40b35fc23c01086fa884f84ad9473"]
+        swift-version: ["5.6.1", "5.7.1"]
+        swiftlint-version: ["0.50.1", "master", "809dcc6bdcf40b35fc23c01086fa884f84ad9473"]
 
     runs-on: ${{ matrix.virtual-environment }}
     steps:
@@ -60,12 +60,12 @@ jobs:
     name: SwiftLint Tests
     runs-on: ubuntu-latest
     env:
-      SWIFTLINT_VERSION: '0.47.1'
+      SWIFTLINT_VERSION: '0.50.1'
     steps:
       - uses: actions/checkout@master
       - uses: sinoru/actions-setup-swift@main
         with:
-          swift-version: '5.6.1'
+          swift-version: '5.7.1'
       - run: |
           export SWIFTLINT_PATH="$(cd ${{ github.workspace }} && pwd -L)/SwiftLint"
 

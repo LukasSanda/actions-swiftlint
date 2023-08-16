@@ -11,7 +11,7 @@ inputs:
   swiftlint-version:
     description: "A SwiftLint version to use."
     required: true
-    default: '0.47.1'
+    default: '0.50.1'
   swiftlint-args:
     description: "Arguments to SwiftLint."
     required: false
